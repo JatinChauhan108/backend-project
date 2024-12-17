@@ -1,0 +1,11 @@
+# JWT
+- An access token secret is added to the environment variable, which can be generated from sha256 or written by self
+- A complex string is always generated according to industry standards
+- Access token expiry is also written in environment variables which refers to the time, for which the token will remain valid.
+- If we write 1d, it means the token will expire after 1 day.
+- More types of syntax for mentioning the time can be found in the documentation.
+- Refresh token secret is also added in env var, in which as well a complex string is added similar to access token secret.
+- Refresh token expiry is always set more than access token expiry
+- Only refresh token is stored in database and not access token
+- Access token and refresh token both are jwt tokens but are used differently
+- Refresh token generation is similar to access token, but payload is given less in case of refresh token, as it keeps getting refreshed.
