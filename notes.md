@@ -30,3 +30,7 @@
 - get is used to retreive a resource.
 - Sometimes http status codes are asked in interviews
 ![http status codes](image.png)
+
+# 
+- endpoint ka naam "/users" na rakhke "/api/v1/users" rakhenge, industry practice hai.
+- v1 matlab version 1
