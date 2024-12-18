@@ -9,3 +9,24 @@
 - Only refresh token is stored in database and not access token
 - Access token and refresh token both are jwt tokens but are used differently
 - Refresh token generation is similar to access token, but payload is given less in case of refresh token, as it keeps getting refreshed.
+
+#
+- Environment Variable m kuch change aaye to server restart karna padhta h changes dekhne k liye, nodemon use kar rhe hain tab bhi
+
+# Strategy to upload files
+- Multer k through file upload karwayenge
+- Cloudinary hamse file leti hai aur apne server pe upload karwati h aws vagarah par
+- Multer ka use karte hue user se file lenge aur temporarily us file ko apne local server par rakh denge
+- Cloudinary ka use karte hue disc storage se file leke cloudinary k server par daal denge
+- Industry standards me yahi hota hai taaki user se file leke ek baar re-upload ka chance mil sake.
+
+# Http 
+- Hyper text transfer protocol is the protocol via which text is sent over the internet.
+- Http headers are metadata in the form of key-value pairs.
+- http methods are set of operations used to interact with the server.
+- mainly we will only use get, post, put, delete and patch
+- put replaces a resource while patch changes a part of a resource
+- post interacts with a resource (mostly adds a resource)
+- get is used to retreive a resource.
+- Sometimes http status codes are asked in interviews
+![http status codes](image.png)
