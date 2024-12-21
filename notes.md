@@ -34,3 +34,15 @@
 # 
 - endpoint ka naam "/users" na rakhke "/api/v1/users" rakhenge, industry practice hai.
 - v1 matlab version 1
+
+# Steps to register user
+- Get user details from frontend
+- Validation of fields ( Though validation is present in frontend, it is necessary to validate at backend as well )
+- One necessary validation is not empty.
+- check if user already exists ( via username or email or both )
+- check for images , and avatar ( which is necessary ) uploaded on disc by multer
+- upload them to cloudinary and using the returned url, check that the image is successfully uploaded on cloudinary as well.
+- create user object - create entry in DB
+- a response is returned on user creation , check if the user is created or not by checking if the response is null or not
+- return the response to user by removing password (which would be encrypted and hence of no use) and refresh token.
+
