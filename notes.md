@@ -46,3 +46,5 @@
 - a response is returned on user creation , check if the user is created or not by checking if the response is null or not
 - return the response to user by removing password (which would be encrypted and hence of no use) and refresh token.
 
+#
+- _id created in mongoDB is bson datatype
