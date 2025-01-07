@@ -48,3 +48,29 @@
 
 #
 - _id created in mongoDB is bson datatype
+
+# Steps to login the user
+- Take data from req body
+- username or email based authentication can be done but a code can be written so that authentication can be done through either of them
+- find the user
+- check password
+- generate access and refresh tokens
+- send both of them securely through cookies
+- send a response for successful login
+
+# Cookie-parser
+- When httpOnly is set in the options, the client can see the cookies but cannot modify them (only server can modify them)
+
+# Steps to logout the user
+- Clear the cookies
+- Clear the refresh token
+
+# 
+- access token and refresh token are the true identification of whether the user is logged in or not.
+- req.cookies can be undefined, so we need to do optional chaining
+- req.cookies becomes undefined when the data is coming from a mobile application where header is received
+- The header contains JWT as the key-value pair with key as "Authorization" and value in the form "Bearer <token>"
+- Since we only need token we remove "Bearer " from it.
+
+# 
+- try to write the update controller of files separately and not mix it with text data for efficiency

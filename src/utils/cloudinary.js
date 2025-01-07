@@ -1,4 +1,4 @@
-import {v2 as cloudinary} from 'cloudinary'
+import {v2 as cloudinary} from 'cloudinary' 
 import fs from 'fs'
 
 cloudinary.config({ 
@@ -23,4 +23,16 @@ const uploadonCloudinary = async (localFilePath) => {
     }
 }
 
-export {uploadonCloudinary}
+const deleteFromCloudinary = async(assetId) => {
+    try {
+        const response = await cloudinary.uploader.destroy(assetId)
+        return response
+    } catch (error) {
+        return null
+    }
+}
+
+export {
+    uploadonCloudinary,
+    deleteFromCloudinary,
+}
